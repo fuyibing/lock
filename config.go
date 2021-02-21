@@ -28,7 +28,7 @@ type configuration struct {
 // Initialize configuration.
 func (o *configuration) initialize() {
 	// Parse fields from yaml.
-	for _, file := range []string{"./config/lock.yaml", "../config/lock.yaml"} {
+	for _, file := range []string{"./tmp/lock.yaml", "./config/lock.yaml", "../config/lock.yaml"} {
 		bs, e1 := ioutil.ReadFile(file)
 		if e1 != nil {
 			continue
